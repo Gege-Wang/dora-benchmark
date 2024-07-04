@@ -4,7 +4,7 @@ nodes:
       machine: A
     custom:
       build: cargo build -p benchmark-example-node --release
-      source: /home/ubuntu/dora/target/release/benchmark-example-node
+      source: /home/ubuntu/dora-benchmark/target/release/benchmark-example-node
       inputs:
         tick: dora/timer/millis/20
       outputs:
@@ -15,7 +15,7 @@ nodes:
       machine: B
     custom:
       build: cargo build -p benchmark-example-sink --release
-      source: /home/ubuntu/mydora/target/release/benchmark-example-sink
+      source: /home/ubuntu/dora-benchmark/target/release/benchmark-example-sink
       inputs:
         latency: rust-node/latency
         throughput: rust-node/throughput
